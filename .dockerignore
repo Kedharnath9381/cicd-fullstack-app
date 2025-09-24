@@ -1,0 +1,10 @@
+**/node_modules
+**/target
+.git
+*.log
+.gitignore
+README.md
+.DS_Store
+.idea
+.vscode
+dist
