@@ -83,17 +83,17 @@ jobs:
 
     - name: 🐳 Build Docker images
       run: |
-        docker-compose build
+        docker compose build
 
     - name: 🐳 Test Docker containers
       run: |
-        docker-compose up -d
+        docker compose up -d
         sleep 30
         echo "📊 Container status:"
-        docker-compose ps
+        docker compose ps
         echo "🏥 Health check:"
         curl -f http://localhost:5050/health || exit 1
-        docker-compose down
+        docker compose down
 
     - name: 📦 Upload build artifacts
       uses: actions/upload-artifact@v4
